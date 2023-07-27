@@ -1,0 +1,797 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, hsla(0, 0%, 13%, 0.733), hsla(0, 0%, 13%, 0.733)), url(../img/salon\ elegante.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-position: center;
+}
+
+/* BARRA NAVEGACIÓN */
+
+nav { 
+    text-align: right;
+}
+
+.nav-container {
+    background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+nav > a {
+    color: #000000;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{  /* color cuando paso el mouse */
+    color: #838383;
+}
+
+header .header-tittle {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+.header-tittle h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.header-tittle h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MAIN */
+
+main .about-us {
+    padding: 30px 15px 60px 15px;
+}
+
+.about-us-tittle {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-family: 'EB Garamond', serif;
+}
+
+.about-us-tittle .tittle {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+hr {
+    width: 30%;
+    height: 3px;
+    margin-left: 35%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: #000;
+    display: flex;
+}
+
+.container-about-us {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image-about-us {
+    border-radius: 64px 13px 98px 10px;
+    width: 400px;
+    height: 600px;
+}
+
+
+.about-us .text-content {
+    width: 50%;
+}
+
+.text-content h3 {
+    margin-bottom: 10px;
+}
+
+.tittle3-about-us {
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 2%;
+}
+
+/*.text-content h3 span {
+    background-color: hsl(341, 100%, 85%);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    margin-right: 5px;
+    box-shadow:  0 0 6px 0 rgba(0,0,0,0.5);
+}*/
+
+.text-content p {
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 20px;
+}
+
+/* GALERÍA */
+
+.portfolio {
+    padding: 50px 15px 50px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 24px;
+    row-gap: 18px;
+    justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+.container .tittle {
+    font-size: 30px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.image-port {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+}
+
+.image-port > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-gallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0);
+    background: #ebe9df5b;
+   /* transition: transform .5s;*/
+}
+
+.hover-gallery p {
+    color: #fff;
+    justify-items: center;
+    position: absolute;
+    bottom: 10%;
+    font-size: 18px;
+}
+
+.image-port:hover .hover-gallery {
+    transform: scale(1);
+}
+
+/* CLIENTES OPINIONES */
+
+.clients-container {
+    padding: 30px 15px 60px 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.cards .card {
+    background-color: #b8978c;
+    display: flex;
+    width: 46%;
+    height: 250px;
+    align-items: center;
+    justify-content: space-evenly;
+    /*border-radius: 5px;*/
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5)
+}
+
+.cards .card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.5)
+
+}
+
+.cards .card > .card-text-container {
+    color: #000000;
+    width: 70%;
+}
+
+.cards .card > .card-text-container p {
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.card-text-container h3 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+/* SERVICIOS */
+
+.about-services {
+    padding: 30px 15px 40px 15px;
+    background: #d4c2b2;
+}
+
+.service-cont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-ind {
+    width: 28%;
+    text-align: center; /* centra solo texto debe ir si o si con display flex*/
+}
+
+.service-ind img {
+    width: 100%;
+    height: 100%;
+  /*border-radius : 32px 32px 32px 32px; */
+    padding-top: 5px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-ind h3 {
+    margin: 10px 0;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.service-ind p {
+    font-weight: 300; 
+    text-align: center;
+}
+
+.tittle-service{
+   font-family: 'EB Garamond', serif;
+   text-align: center;
+   padding-bottom: 10px;
+   font-weight: 400;
+   font-size: 32px;
+}
+
+/* FOOTER */
+
+footer { /* sin punto xq selecciono la etiqueta completa */
+    background-color: #ebe9df;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.content-footer {
+    text-align: center;
+}
+
+.content-footer h4 {
+    color: black;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.content-footer p {
+    color: black;
+    font-weight: 300;
+}
+
+.tittle-final {
+    text-align: center;
+    font-size: 22px;
+    margin: 20px 0 0 0;
+    color: #85837d;
+    font-weight: 400;
+}
+
+/* los display van en los DIV */
+
+.tittle {
+    padding-bottom: 10px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* MEDIAS QUERIES */
+
+    /* mobile */
+
+@media screen and (max-width: 500px) { /* se indica hasta qué max queremos que se comporte de cierta manera */
+    
+    /* header */
+
+    header {
+        height: 500px;
+    }
+    nav {
+       text-align: center; 
+    }
+
+    nav > a {
+        margin-right: 5px;
+    }
+
+    .header-tittle h1 {
+        font-size: 40px;
+    }
+
+    .header-tittle h2 {
+        font-size: 20px;
+    }
+
+    /* about us */
+
+    .container-about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-about-us {
+        margin-bottom: 5%;
+    }
+
+    .image-about-us-div {
+        text-align: center;
+        display: flex;
+    }
+
+    .image-about-us-div img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-us .text-content {
+        width: 90%
+    }
+
+    .about-us h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .text-content h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .text-content p {
+        font-size: 20px;
+        text-align: justify;
+        padding: 0 6px 0 6px;
+    }
+
+    /* GALERIA*/ 
+
+    .gallery {
+        display: flex;
+        margin: auto;
+    }
+
+    .image-port {
+        width: 80%;
+        height: 80%;
+    }
+
+    .portfolio h2 {
+        text-align: center;
+    }
+
+    /* clientes */
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 5%;
+    }
+    .cards .card {
+        width: 100%;
+        height: 120%;
+        display: flex;
+        align-items: center;
+        padding: 5% 5% 5% 5%;
+    }
+
+    .cards .card img {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        margin-right: 9px;
+    }
+
+    .card-text-container h4 {
+        font-size: 18px;
+    }
+
+    .card-text-container p {
+        font-size: 16px;
+    }
+
+    /* servicios */
+
+    .service-cont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .service-ind {
+        width: 90%;
+        padding: 10px;
+    }
+    .service-ind img {
+        width: 100%;
+    }
+
+    /* footer */
+
+    footer {
+        height: 70%;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        border: none;
+        width: 90%;
+        align-items: center;
+        margin-top: -25px;
+    }
+
+    .content-footer {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-footer h4 {
+        font-size: 16px;
+    }
+
+    .content-footer p {
+        font-size: 14px;
+    }
+
+    .tittle-final{
+        font-size: 18px;
+        margin-top: -40px;
+    }
+
+}
+
+    /* tablet */
+
+@media screen and (max-width: 800px) {
+
+    /* header */
+
+    nav {
+    text-align: center;
+    }
+
+    .header-tittle h1 {
+        font-size: 45px;
+    }
+
+    .header-tittle h2 {
+        font: 24px;
+    }
+
+    /* about-us*/
+
+    .about-us-tittle hr {
+        margin-top: 2%;
+        margin-bottom: -2%;
+    }
+
+    .container-about-us{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        padding: 0% 5px 0.5% 0px;
+    }
+
+    .container-about-us img {
+        flex-direction: row;
+        width: 49%;
+        padding: auto;
+    }
+
+    .image-about-us-div {
+        justify-content: space-evenly;
+    }
+
+    .text-content {
+        width: 100%;
+        display:contents;
+        padding: 0px 15px 0px 15px;
+    }
+
+    .text-content h3 {
+        margin-top: 3%;
+    }
+
+    .text-content p {
+        width: 99%;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    /* about services */
+
+    .about-services .container hr {
+        margin-bottom: 20px;
+    }
+
+    .service-ind h3 {
+        font-size: 24px;
+    }
+
+    .service-ind p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    /* gallery */
+
+    .hover-gallery p {
+        font-size: 12px;
+    }
+
+    /* cards */
+
+    .cards {
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .card {
+        margin-bottom: 5%;
+        margin: 20px
+    }
+    .cards .card {
+        width: 100%;
+        height: 150%;
+        display: flex;
+        align-items: center;
+        padding: 5% 5% 5% 5%;
+    }
+
+    .cards .card img {
+        width: 120px;
+        height: 120px;
+        position: relative;
+        margin: 5px;
+    }
+
+    .card-text-container h4 {
+        font-size: 18px;
+    }
+
+    .card-text-container p {
+        font-size: 16px;
+    }
+}   
+
+    /* laptop */
+
+@media screen and (max-width: 1024px){
+
+    /* about-us*/
+
+    .container-about-us{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+
+    .text-content {
+        width: 100%;
+        display:contents;
+        padding: 0px 15px 0px 15px;
+    }    
+
+    .text-content h3 {
+        margin-top: 3%;
+    }
+
+    /* clients */
+
+    .cards {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        margin-bottom: 5%;
+        margin: 2%;
+    }
+    .cards .card {
+        width: 100%;
+        height: 150%;
+        display: flex;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .cards .card img {
+        width: 120px;
+        height: 120px;
+        position: relative;
+        margin-right: 9px;
+    }
+
+    .card-text-container h4 {
+        font-size: 18px;
+    }
+
+    .card-text-container p {
+        font-size: 16px;
+    }
+}
+
+    /* max 1500 */
+
+@media screen and (max-width:1500px){
+
+    /*about-us*/
+
+    .container-about-us {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    
+    .image-about-us-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .image-about-us-div img {
+        width: 50%;
+        padding: 0px 10px 0px 10px;
+    }
+    
+    .about-us .text-content {
+        width: 50%;
+        margin: 0px 10px 20px 0px;
+    }
+
+    /*clients*/
+
+    .cards .card {
+        height: 125%;
+    }
+
+}
+
+    /* min 501 max 770 */
+
+@media only screen and (min-width: 501px) and (max-width: 770px) {
+
+    /* clients */
+
+    .cards .card {
+        height: 110%;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .card-text-container {
+        font-size: 13px;
+    }
+
+    /* footer */
+
+    footer {
+        height: 70%;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        border: none;
+        width: 90%;
+        align-items: center;
+        margin-top: -25px;
+    }
+
+    .content-footer {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-footer h4 {
+        font-size: 16px;
+    }
+
+    .content-footer p {
+        font-size: 14px;
+    }
+
+    .tittle-final{
+        font-size: 18px;
+        margin-top: -40px;
+    }
+}
+
+    /* max 1700 */
+
+@media screen and (max-width: 1700px) {
+
+    /*about us*/
+
+    .about-us {
+        margin: 20px;
+    }
+}
